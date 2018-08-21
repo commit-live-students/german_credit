@@ -16,6 +16,6 @@ This assignment comprises of loading the structured data and applying some opera
 | --- | --- | --- | --- | --- |
 | path | string | compulsory |  | path of the csv file location |
 
-### Returns
+### Returns :
 
 None
