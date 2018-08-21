@@ -15,3 +15,7 @@ This assignment comprises of loading the structured data and applying some opera
 | Parameter | dtype | argument type | default value | description |
 | --- | --- | --- | --- | --- |
 | path | string | compulsory |  | path of the csv file location |
+
+### Returns
+
+None
