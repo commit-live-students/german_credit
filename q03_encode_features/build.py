@@ -12,12 +12,14 @@ def q03_encode_features(data):
     data1 = data_1.copy()
     dic = {}
     df= data_1.select_dtypes(include=['object'])
-
+    
     # Initilalizing LabelEncoder()
     le = LabelEncoder()
-
+    
     df_encoded = df.apply(le.fit_transform)
     data_1.update(df_encoded)
-    return(data_1)
-
+    return (data_1), (data_1.shape)
+    
 q03_encode_features(path)
+
+
