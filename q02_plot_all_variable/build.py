@@ -12,18 +12,18 @@ path = 'data/GermanData.csv'
 plt.style.use('seaborn-darkgrid')
 def q02_plot_all_variable(path, cols=5):
     df = q01_load_data_and_add_column_names(path)
-    fig, ax = plt.subplots(figsize=(20, 15))
     rows = ceil(float(df.shape[1]) / cols)
-    for i, column in enumerate(df.columns):
-        ax = fig.add_subplot(rows, cols, i + 1)
-        ax.set_title(column)
-        if df.dtypes[column] == np.object:
-            ax.bar(df[column].value_counts().index,df[column].value_counts().values )
+    plt.figure(figsize=(15,30))
+    for i, value in enumerate(df.columns):
+        plt.subplot(rows,cols,i+1)
+        if (df.dtypes[value] == np.object):
+            df[value].value_counts().plot(kind='bar')
         else:
-            ax.hist(df[column])
-            plt.xticks(rotation='vertical')
-            plt.subplots_adjust(hspace=0.7, wspace=0.2)
-        plt.show()
+            df[value].hist()
+        plt.xlabel(df.columns[i])
+        plt.ylabel('Occurences')
+        plt.title('{} Plot'.format(df.columns[i]))
+        plt.tight_layout()
 
 
 
