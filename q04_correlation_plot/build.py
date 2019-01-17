@@ -2,7 +2,6 @@
 import matplotlib.pyplot as plt
 import seaborn as sns
 import pandas as pd, numpy as np
-import seaborn as sns
 from sklearn.preprocessing import LabelEncoder
 plt.switch_backend('agg')
 import sys, os
